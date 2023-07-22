@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Factory - Seat</title>
+
+    <!-- ===== FAVICON ICON ===== -->
+    <link rel="shortcut icon" href="../assets/images/ticket-factory-favicon.png" type="image/x-icon">
+
+    <!-- ===== COMMON CSS ===== -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ===== ADMIN-COMMON CSS ===== -->
+    <link rel="stylesheet" href="../assets/css/admin-common.css">
+
+    <!-- ===== POPPINS FONT ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== FONTAWESOME ICON ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="seat">
+    <div class="row">
+        <div id="sideBar">
+            <ul>
+                <li>
+                    <a><img src="../assets/images/ticket-factoroy-logo.png" alt="Ticket Fectory"></a>
+                </li>
+                <li>
+                    <a class="gap_10" href="../../movie/admin/admin-cinema.html">Cinema</a>
+                </li>
+                <li>
+                    <a class="gap_10" href="../../movie/admin/admin-movie.html">Movie</a>
+                </li>
+                <li>
+                    <a class="gap_10 active" href="../../movie/admin/admin-seat.html">Seat</a>
+                </li>
+                <li>
+                    <a class="gap_10" href="#" id="addMovieBtn">Other...</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content_part">
+            <div class="align_row header_main">
+                <a href="#" class="menu_bar">
+                    <!-- <i class="fa-solid fa-ellipsis"></i> -->
+                </a>
+                <a href="#" class="profile">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+            <div class="align_row header_sub">
+                <a></a>
+                <h2 class="gredi_text">Seats</h2>
+                <button type="button" id="addHeaderBtn" class="btn blue_btn">Seat +</button>
+            </div>
+            <div class="data_part custom_scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SId</th>
+                            <th>Cinema</th>
+                            <th>Movie</th>
+                            <th>Time Of Show</th>
+                            <th>Total Seats</th>
+                            <th>Price/Seat (&#x20B9)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTable"></tbody>
+                </table>
+            </div>
+            <div class="form_layer" id="addFormInner">
+                <form action="#" method="get" id="addForm" novalidate>
+                    <button type="button" id="closeBtn"></button>
+                    <h2 class="gredi_text">Add Seats</h2>
+                    <div class="inputField">
+                        <select name="cinema" id="cinemaSelect">
+                            <option value="" selected>Select Cinema</option>
+                        </select>
+                        <span></span>
+                        <span class="down_icon"></span>
+                    </div>
+                    <div class="inputField">
+                        <select name="Movie" id="movieSelect" disabled>
+                            <option value="" selected>Select Movie</option>
+                        </select>
+                        <span></span>
+                        <span class="down_icon"></span>
+                    </div>
+                    <div class="inputField">
+                        <select name="Time" id="timeSelect" disabled>
+                            <option value="" selected>Select Show's Time</option>
+                        </select>
+                        <span></span>
+                        <span class="down_icon"></span>
+                    </div>
+                    <div class="inputField">
+                        <input type="number" name="seat" placeholder="How many seats?" id="seats">
+                        <span></span>
+                    </div>
+                    <div class="inputField">
+                        <input type="number" name="price" placeholder="Price per seat?" id="price">
+                        <span></span>
+                    </div>
+                    <input class="btn gredi_btn" type="submit" value="Add +">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== COMMON.JS SCRIPT ===== -->
+    <script src="../assets/js/common.js"></script>
+
+    <!-- ===== ADMIN.JS SCRIPT =====  -->
+    <script src="../assets/js/admin-seat.js"></script>
+</body>
+
+</html>

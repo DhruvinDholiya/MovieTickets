@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Factory - Sign Up</title>
+
+    <!-- ===== FAVICON ICON ===== -->
+    <link rel="shortcut icon" href="../assets/images/ticket-factory-favicon.png" type="image/x-icon">
+
+    <!-- ===== COMMON CSS ===== -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ===== POPPINS FONT ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== FONTAWESOME ICON ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="center_form">
+    <section class="form_sec">
+        <form action="#" method="get" id="signUpForm" novalidate>
+            <img class="logo" src="../assets/images/ticket-factory.png" alt="Ticket Fectory">
+            <h2 class="gredi_text">Sign Up</h2>
+            <div class="inputField">
+                <input type="text" name="userName" placeholder="Your Name" id="userName">
+                <span></span>
+            </div>
+            <div class="inputField">
+                <input type="text" name="userEmail" placeholder="Email" id="email">
+                <span></span>
+            </div>
+            <div class="inputField">
+                <button type="button" onclick="showPass()" id="passHideShow">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </button>
+                <input type="password" name="userPass" placeholder="Password" id="pass">
+                <span></span>
+            </div>
+            <div class="inputField">
+                <input type="text" name="userDob" placeholder="Date of Birth" id="dob">
+                <span></span>
+            </div>
+            <input class="btn gredi_btn" type="submit" value="Register" id="signUpBtn">
+            <p class="login_signup_text">Already have an account? <a href="../login.html">Login</a></p>
+        </form>
+    </section>
+
+    <!-- ===== COMMON.JS SCRIPT ===== -->
+    <script src="../assets/js/common.js"></script>
+
+    <!-- ===== SIGN-UP.JS SCRIPT ===== -->
+    <script src="../assets/js/sign-up.js"></script>
+</body>
+
+</html>

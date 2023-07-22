@@ -1,0 +1,386 @@
+body {
+    background-color: var(--gray-bg);
+}
+
+.hero_section {
+    padding: 25px 0;
+}
+
+h1 {
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+h4 span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.hero_section::after,
+.hero_section::before {
+    display: none;
+}
+
+.hero_section,
+.ticket_chart {
+    background-color: var(--white);
+}
+
+.hero_section .title_part {
+    margin: 0;
+    text-align: center;
+}
+
+.movie_in_cinema_section {
+    padding: 40px;
+}
+
+.ticket_chart {
+    box-shadow: inset rgba(0, 0, 0, 0.25) 0px 0px 5px;
+    min-height: 600px;
+}
+
+.ticket_chart li {
+    border-bottom: 1px solid var(--gray-bg);
+    padding: 0 16px;
+}
+
+.ticket_chart li:hover {
+    background-color: var(-);
+}
+
+.ticket_chart li>div {
+    padding: 25px 10px;
+}
+
+.ticket_chart .cinema_part {
+    width: 310px;
+}
+
+.cinema_part h6 {
+    width: 80%;
+}
+
+.cinema_part h6 a {
+    color: var(--gray-primary);
+}
+
+.cinema_part h6 a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.cinema_part a:not(h6 a) {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 1px;
+}
+
+.cinema_part a i {
+    height: 12px;
+}
+
+.cinema_part>.align_row {
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.cinema_part p {
+    color: var(--orange);
+    font-size: 12px;
+}
+
+.cinema_part img {
+    width: 25px;
+}
+
+.ticket_chart .btn {
+    color: #4abd5d;
+    background-color: transparent;
+    border: 1px solid #4abd5d;
+}
+
+#showHelp p {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#showHelp p span {
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    display: block;
+}
+
+#showHelp p.green span {
+    background-color: #4abd5d;
+}
+
+#showHelp p.red span {
+    background-color: #FF0000;
+}
+
+#showHelp .green,
+.cinema_part a:hover {
+    color: #4abd5d;
+}
+
+#showHelp .red {
+    color: #FF0000;
+}
+
+.seat_modal_section {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    background-color: var(--gray-bg);
+    overflow-y: auto;
+}
+
+#topBar,
+#bottomBar {
+    background-color: var(--gray-bg-dark);
+    padding: 15px 20px;
+    position: relative;
+    height: 75px;
+}
+
+#topBar h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#closeBtn {
+    position: relative;
+    top: auto;
+    right: auto;
+    height: 17px;
+    width: 17px;
+    border-top: 3px solid var(--gray);
+    border-left: 3px solid var(--gray);
+    transform: rotate(-45deg);
+}
+
+#closeBtn::after,
+#closeBtn::before {
+    display: none;
+}
+
+.seats_part {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.seats_part button {
+    padding: 4px;
+    height: 30px;
+    width: 30px;
+    min-width: auto;
+    min-height: auto;
+    font-size: 10px;
+    border: 1px solid #4abd5d;
+    color: #4abd5d;
+    background-color: transparent;
+}
+
+.price {
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+.seats_part button:hover {
+    color: #4abd5d;
+}
+
+.price::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    display: block;
+    border: 2px solid var(--gray-primary);
+    border-radius: 6px;
+}
+
+button.selected {
+    background-color: #4abd5d;
+    color: var(--white);
+}
+
+button.selected:hover {
+    color: var(--white);
+}
+
+#bottomBar {
+    position: fixed;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.7s;
+}
+
+.available_for_pay#bottomBar {
+    bottom: 0;
+}
+
+button:disabled,
+button:disabled:hover {
+    color: var(--white);
+    border-color: #c9c9c9;
+    background-color: #c9c9c9;
+    cursor: no-drop;
+}
+.paymented .seats_part {
+    height: calc(100% - 75px);
+}
+.paymented #seatsDisplay {
+    height: 100%;
+}
+
+.payment_done {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.payment_text > p {
+    font-size: 26px;
+    color: #5de593;
+    text-align: center;
+}
+.payment_text > p:first-child {
+    margin: 15px 0 5px;
+    font-size: 22px;
+}
+.check_container {
+    width: 125px;
+    height: 140px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check_background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #5de593, #41d67c);
+    box-shadow: 0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset,
+        0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset;
+    transform: scale(0.84);
+    border-radius: 50%;
+    animation: animateContainer 0.75s ease-out forwards 0.75s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+svg {
+    width: 65%;
+    transform: translateY(0.25rem);
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    animation: animateCheck 0.35s forwards 1.25s ease-out;
+}
+
+.check_shadow {
+    bottom: calc(-15% - 5px);
+    left: 0;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(73, 218, 131, 1), transparent);
+    animation: animateShadow 0.75s ease-out forwards 0.75s;
+}
+
+@keyframes animateContainer {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        box-shadow: 0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(0.9);
+        box-shadow: 0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    43.75% {
+        transform: scale(1.15);
+        box-shadow: 0px 0px 0px 43.334px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 65px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    62.5% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 21.667px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    81.25% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    100% {
+        opacity: 1;
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset,
+            0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset;
+    }
+}
+
+@keyframes animateCheck {
+    from {
+        stroke-dashoffset: 80;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes animateShadow {
+    0% {
+        opacity: 0;
+        width: 100%;
+        height: 15%;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    43.75% {
+        width: 40%;
+        height: 7%;
+        opacity: 0.35;
+    }
+
+    100% {
+        width: 85%;
+        height: 15%;
+        opacity: 0.25;
+    }
+}

@@ -1,0 +1,56 @@
+.hero_section {
+    padding: 60px 0;
+}
+.hero_section::before {
+    width: 450px;
+    height: 450px;
+    top: 15px;
+}
+.hero_section .title_part {
+    margin-bottom: 10px;
+}
+.hero_section .description {
+    max-width: 1000px;
+}
+.hero_section .content_block p {
+    gap: 5px;
+    color: #000;
+}
+.hero_section .content_block p span {
+    position: relative;
+}
+.hero_section .content_block p.view,
+.hero_section .content_block p.language {
+    background-color: #FFF;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 6px 12px;
+    display: inline-block;
+}
+.hero_section .content_block p.type,
+.hero_section .content_block p:last-of-type {
+    gap: 25px;
+}
+.hero_section .content_block p.type {
+    margin-bottom: 20px;
+}
+
+.hero_section .content_block p.language {
+    margin-bottom: 30px;
+}
+.hero_section .content_block p.type span:not(:last-child)::before,
+.hero_section .content_block p:last-of-type span:not(:last-child)::before {
+    content: '';
+    height: 4px;
+    width: 4px;
+    background-color: var(--gray-primary);
+    display: block;
+    top: 6px;
+    border-radius: 4px;
+    position: absolute;
+    right: -15px;
+}
+.movie_section .block {
+    min-width: 202px;
+    max-width: 202px;
+}

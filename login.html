@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Factory - Login</title>
+
+    <!-- ===== FAVICON ICON ===== -->
+    <link rel="shortcut icon" href="../movie/assets/images/ticket-factory-favicon.png" type="image/x-icon">
+
+    <!-- ===== COMMON CSS ===== -->
+    <link rel="stylesheet" href="../movie/assets/css/common.css">
+
+    <!-- ===== POPPINS FONT ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== FONTAWESOME ICON ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="center_form">
+    <section class="form_sec">
+        <form action="#" method="get" id="loginForm" novalidate>
+            <img class="logo" src="../movie/assets/images/ticket-factory.png" alt="Ticket Fectory">
+            <h2 class="gredi_text">Login</h2>
+            <div class="inputField">
+                <input type="text" name="loginEmail" placeholder="Email" id="email">
+                <span></span>
+            </div>
+            <div class="inputField">
+                <button type="button" onclick="showPass()" id="passHideShow">
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </button>
+                <input type="password" name="loginPass" placeholder="Password" id="pass">
+                <span></span>
+            </div>
+            <input class="btn gredi_btn" type="submit" value="Login" id="loginSubmitBtn">
+            <p class="login_signup_text">Create an Account? <a href="../movie/user/sign-up.html">Sign Up</a></p>
+        </form>
+    </section>
+
+    <!-- ===== COMMON.JS SCRIPT ===== -->
+    <script src="../movie/assets/js/common.js"></script>
+
+    <!-- ===== LOGIN.JS SCRIPT ===== -->
+    <script src="../movie/assets/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets, Plays, Sports, Events & Cinemas near your - Ticket Factory</title>
+
+    <!-- ===== FAVICON ICON ===== -->
+    <link rel="shortcut icon" href="../assets/images/ticket-factory-favicon.png" type="image/x-icon">
+
+    <!-- ===== COMMON CSS ===== -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- ===== USER CSS ===== -->
+    <link rel="stylesheet" href="../assets/css/user.css">
+
+    <!-- ===== POPPINS FONT ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== FONTAWESOME ICON ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body id="user">
+    <header>
+        <div class="header_top">
+            <div class="container">
+                <div class="align_row">
+                    <a class="logo">
+                        <img src="../assets/images/ticket-factoroy-logo.png" alt="">
+                    </a>
+                    <div class="inputField" id="searchData">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search for Movies, Cinema and others....." id="filterData">
+                    </div>
+                    <div id="userProfile" class="align_row">
+                        <button class="align_row gap_10" id="profile"><span>Dhruvin Dholiya <span></span></span><img src="../assets/images/dashboard-profile.png" alt=""></button>
+                        <a class="btn btn_sm" href="../user/sign-up.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <div class="container">
+                <div class="align_row">
+                    <nav>
+                        <ul class="row">
+                            <li>
+                                <a class="active" href>Home</a>
+                            </li>
+                            <li>
+                                <a href="../user/movie.html">Movies</a>
+                            </li>
+                            <li>
+                                <a href="../user/cinema.html">Cinemas</a>
+                            </li>
+                            <li>
+                                <a href="">Plays</a>
+                            </li>
+                            <li>
+                                <a href="">Sports</a>
+                            </li>
+                            <li>
+                                <a href="">Events</a>
+                            </li>
+                            <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="row">
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="cinemaData" class="cinema_data">
+            <div class="container">
+                <div class="title_part align_row">
+                    <h2 class="gredi_text">Popular Cinemas</h2>
+                    <a href="../user/cinema.html" class="btn btn_tranparent" id="seeAllCinema">View All...</a>
+                </div>
+                <div class="row custom_scroll" id="cinemaDisplay"></div>
+            </div>
+        </section>
+        <section id="movieData" class="movie_data">
+            <div class="container">
+                <div class="title_part align_row">
+                    <h2 class="gredi_text">Recommended Movies</h2> 
+                    <a href="../user/movie.html" class="btn btn_tranparent" id="seeAllMovie">View All...</a>
+                </div>
+                <div class="row custom_scroll" id="movieDisplay"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== COMMON.JS SCRIPT ===== -->
+    <script src="../assets/js/common.js"></script>
+
+    <!-- ===== USER.JS SCRIPT =====  -->
+    <script src="../assets/js/user.js"></script>
+</body>
+
+</html>
