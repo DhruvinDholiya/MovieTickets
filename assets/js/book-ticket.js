@@ -22,48 +22,6 @@ const handleTickets = () => {
 }
 window.onload = handleTickets();
 
-if (movieInCinema.length > 0) {
-    let html_cinemaBlock = '\
-        <li class="align_row" id="cinemaInfo">\
-            <div><p>05 Jun, 2023</p></div>\
-            <div class="row" id="showHelp">\
-                <p class="green"><span></span>SEATS AVAILABLE</p>\
-                <p class="red"><span></span>SEATS NOT AVAILABLE</p>\
-            </div>\
-        </li>';
-    movieInCinema.map((obj) => {
-        let f_showTime = ls_movieData.filter((movieObj) => movieObj.cid === obj.cid && movieObj.name === ss_redirectedMovieName)[0];
-        let html_showTime = '';
-        f_showTime.time.map((showTime) => {
-            html_showTime += '<button type="btn" onclick="handleSeat(' + "'" + showTime + "'" + "," + "'" + obj.name + "'" + "," + "'" + obj.cid + "'" + ')" class="btn">' + showTime + '</button>';
-        });
-        html_cinemaBlock += '\
-        <li class="row" id="cinema-' + obj.cid + '">\
-            <div class="cinema_part">\
-                <div class="align_row">\
-                    <h6><a href onclick="cinemaRedirect(' + obj.cid + ')">' + obj.name + '</a>\</h6>\
-                    <a href onclick="cinemaRedirect(' + obj.cid + ')"><i class="fa-sharp fa-solid fa-circle-info"></i>INFO</a>\
-                </div>\
-                <div class="row gap_30">\
-                    <div class="align_row gap_10">\
-                        <img src="../assets/images/m-ticket.png">\
-                        <p>Mobile Ticket</p>\
-                    </div>\
-                    <div class="align_row gap_10">\
-                        <img src="../assets/images/m-ticket.png">\
-                        <p>Food & Beverage</p>\
-                    </div>\
-                </div>\
-            </div>\
-            <div class="data_part align_row">\
-                <p>Time of Shows: </p>\
-                <div class="row" id="showTimeBlock">' + html_showTime + '</div>\
-            </div>\
-        </li>';
-        document.getElementById("ticketBookChart").innerHTML = html_cinemaBlock;
-    });
-}
-
 const handleSeat = (showTime, cinemaName, f_cid) => {
     document.getElementById("addFormInner").style.display = "block";
     document.body.classList.add("scroll_hide");
@@ -135,5 +93,47 @@ const handlePay = () => {
 if(ref_closeBtn) {
     ref_closeBtn.addEventListener("click", function () {
         document.getElementById("bottomBar").innerHTML = '';
+    });
+}
+
+if (movieInCinema.length > 0) {
+    let html_cinemaBlock = '\
+        <li class="align_row" id="cinemaInfo">\
+            <div><p>05 Jun, 2023</p></div>\
+            <div class="row" id="showHelp">\
+                <p class="green"><span></span>SEATS AVAILABLE</p>\
+                <p class="red"><span></span>SEATS NOT AVAILABLE</p>\
+            </div>\
+        </li>';
+    movieInCinema.map((obj) => {
+        let f_showTime = ls_movieData.filter((movieObj) => movieObj.cid === obj.cid && movieObj.name === ss_redirectedMovieName)[0];
+        let html_showTime = '';
+        f_showTime.time.map((showTime) => {
+            html_showTime += '<button type="btn" onclick="handleSeat(' + "'" + showTime + "'" + "," + "'" + obj.name + "'" + "," + "'" + obj.cid + "'" + ')" class="btn">' + showTime + '</button>';
+        });
+        html_cinemaBlock += '\
+        <li class="row" id="cinema-' + obj.cid + '">\
+            <div class="cinema_part">\
+                <div class="align_row">\
+                    <h6><a href onclick="cinemaRedirect(' + obj.cid + ')">' + obj.name + '</a>\</h6>\
+                    <a href onclick="cinemaRedirect(' + obj.cid + ')"><i class="fa-sharp fa-solid fa-circle-info"></i>INFO</a>\
+                </div>\
+                <div class="row gap_30">\
+                    <div class="align_row gap_10">\
+                        <img src="../assets/images/m-ticket.png">\
+                        <p>Mobile Ticket</p>\
+                    </div>\
+                    <div class="align_row gap_10">\
+                        <img src="../assets/images/m-ticket.png">\
+                        <p>Food & Beverage</p>\
+                    </div>\
+                </div>\
+            </div>\
+            <div class="data_part align_row">\
+                <p>Time of Shows: </p>\
+                <div class="row" id="showTimeBlock">' + html_showTime + '</div>\
+            </div>\
+        </li>';
+        document.getElementById("ticketBookChart").innerHTML = html_cinemaBlock;
     });
 }
